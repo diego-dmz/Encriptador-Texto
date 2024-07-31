@@ -86,7 +86,7 @@ function filtrarTexto() {
             resultadodiv.appendChild(mensaje2);
         }
 
-        // Oculta el botón de copiar si no hay texto
+        // Oculta el botón de copiar 
         botonCopiar.style.display = "none";
     } else {
         // Muestra el div de resultados y el botón de copiar si hay texto
