@@ -1,4 +1,4 @@
-# Aplicación de Encriptación de Texto #
+# **Aplicación de Encriptación de Texto**
 
 Una **aplicación web** que permite encriptar y desencriptar texto utilizando una técnica de sustitución simple. La aplicación también incluye funcionalidades para filtrar el texto, copiar el texto encriptado al portapapeles y mostrar mensajes temporales en lugar de alertas.
 
