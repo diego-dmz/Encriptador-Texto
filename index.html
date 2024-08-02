@@ -7,30 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head> 
 <body>
-    <header>
-        <img src="imagenes/Logo.png" alt="logo Alura">
+    <header >
+        <img class="Logo__Encabezado" src="imagenes/Logo.png" alt="logo Alura">
     </header>
+    
     <main>
-        <div class="contenedor">
-            <div class="textoizq">
-                <textarea class="texto" id="texto" placeholder="Ingrese el texto aquí" cols="70" rows="35" oninput="filtrarTexto()"></textarea>
+        <div class="Presentacion">
+                <textarea class="Imput__Texto" id="texto" placeholder="Ingrese el texto aquí" oninput="filtrarTexto()"></textarea>
+            <div class="Resultado__Texto"  id="resultadotexto" >
+                <img class="img__resultado" src="imagenes/Muñeco.png" alt="muñeco salida">
+                <p style="font-weight: bold;">Ningún mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <div class="textoder" class="contenedor-centro" id="resultadotexto" >
-                <img class="muñeco" src="imagenes/Muñeco.png" alt="muñeco salida">
-                <p class="negrita_centrado">Ningún mensaje fue encontrado</p>
-                <p class="texto-dos-lineas">Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
-           
         </div>
-        <div class="boton-contenedor">
+
+        <div class="botones">
             <button class="boton_cifrar" onclick="cifrarTexto()">Encriptar</button>
             <button class="boton_decifrar" onclick="descifrarTexto()">Desencriptar</button>
             <button class="boton_copiar" onclick="copiarTexto()">Copiar</button>
         </div>
-       
-        
-      
     </main>
     <script src="logic.js"></script>
 </body>
+
 </html>

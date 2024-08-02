@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
+:root {
+   --color-1: #FFFFFF;
+   --color-2: #0A3871;
+   --color-3: #272727; ;
 
+   --fuente-Inter: 'Inter', sans-serif;
+}
 
 /* Reset global para padding y margin */
 * {
@@ -8,134 +14,71 @@
    margin: 0;
 }
 
-
-/* Estilos para placeholders en campos de texto */
-::placeholder {
-   color: #0A3871; /* Color del texto */
-   font-size: 32px; /* Tamaño de fuente */
-   opacity: 0.6; /* Opacidad */
-}
-
-/* Estilos para el contenedor principal */
-.contenedor {
-
-   padding: 60px; /* Espaciado interno */
-   display: flex; /* Flexbox para el layout */
-   height: 500px; /* Altura */
+body{
    box-sizing: border-box;
-  
+   overflow: hidden;
+}
+.Presentacion{
+   padding: 4% 4% 4% 12%;
+   display: flex;
+   justify-content:flex-start;
+   gap: 25px;
+   background-color: var(--color-1);
+ 
 }
 
-
-/* Estilos para el contenedor de texto izquierdo */
-.textoizq {
-   width: 60%; /* Ancho */
-   display: flex; /* Flexbox para el layout */
-   justify-content: center; /* Centra el contenido */
-
+.Logo__Encabezado {
+   padding: 4% 0% 0% 4%;
+   width: 120px;
+   height: 48px;
 }
 
-/* Estilos para elementos de texto */
-.texto {
-   border: none; /* Sin borde */
-   outline: none; /* Sin borde al enfocarse */
+.Imput__Texto {
+   width: 57%;
+   height: 4.8%;
    resize: none; /* Desactiva el cambio de tamaño */
-   color: #0A3871; /* Color del texto */
+   outline: none; /* Sin borde al enfocarse */
+   border: none;/* Sin borde */
+   color: var(--color-2);
+   font-family: var(--fuente-Inter);
    font-size: 32px;
+   font-weight: 400;
+   overflow: hidden; /* Oculta el contenido desbordado */
 }
-
-/* Estilos para el contenedor de texto derecho */
-.textoder {
-   width: 40%; /* Ancho */
-   border-radius: 32px; /* Bordes redondeados */
-   text-align: center; /* Centra el texto */
-   color: #9E9E9E; /* Color del texto gris claro (gray-400) */
-   font-family: 'Inter', sans-serif; /* Fuente Inter Regular */
-   font-size: 24px;
-}
-
-/* Estilos para la imagen del muñeco */
-.muñeco {
-   width: 336px; /* Ancho */
-   height: 304px; /* Altura */
-   margin: 0 auto; /* Centra horizontalmente */
+.Resultado__Texto p {
+   margin-bottom: 17px; 
+   color: var(--color-3);
+   width: 90%;
 }
 
 
-/* Estilos para el contenedor de botones */
-.boton-contenedor {
-   width: 680px; /* Ancho */
-   height: 60px; /* Altura */
-   display: flex; /* Flexbox para el layout */
-   justify-content: flex-end;
-   gap: 20px; /* Espacio entre botones */
+::placeholder {
+   color: var(--color-2);
+   font-family: var(--fuente-Inter);
+   font-size: 36px;
+   font-weight: 400;
 }
 
-/* Estilos comunes para los botones */
-.boton_cifrar,
-.boton_decifrar,
-.boton_copiar {
-   width: 308px; /* Ancho */
-   height: 47px; /* Altura */
-   border-radius: 24px; /* Bordes redondeados */
-   color: #0A3871; /* Color del texto */
-   border: 1px solid #0A3871; /* Borde sólido */
-   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+
+.Resultado__Texto {
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* Centra horizontalmente dentro de la columna */
+   justify-content: center; /* Centra verticalmente dentro del contenedor */
+   width: 30%;
+   height: 94.4%;
+   color: var(--color-2);
+   font-family: var(--fuente-Inter);
+   font-size: 18px;
+   font-weight: 400;
+   overflow: hidden; /* Oculta el contenido desbordado */
+   text-align: center;
+   max-width: 100vw; /* Limita el ancho al tamaño de la vista */
 }
 
-/* Estilos específicos para el botón de cifrar */
-.boton_cifrar {
-   background-color: #0A3871; /* Color de fondo */
-   color: #D8DFE8; /* Color del texto */
-   border: none; /* Sin borde */
-}
+.botones {}
 
-/* Estilos específicos para el botón de descifrar */
-.boton_decifrar {
-   background-color: #D8DFE8; /* Color de fondo */
-}
 
-/* Estilos específicos para el botón de copiar, oculto por defecto */
-.boton_copiar {
-   display: none; /* Oculta el botón */
-   position: absolute; /* Posicionamiento absoluto */
-   left: 900px; /* Posición desde la izquierda */
-}
+.mensaje-temporal {}
 
-/* Estilos para mensajes temporales */
-.mensaje-temporal {
-  position: fixed; /* Posicionamiento fijo */
-  top: 20px; /* Desde el borde superior */
-  right: 20px; /* Desde el borde derecho */
-  background-color: #0A3871; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  padding: 10px; /* Espaciado interno */
-  z-index: 1000; /* Prioridad de apilamiento alta */
-  font-size: 12px; /* Tamaño de fuente */
-  border-radius: 25px; /* Bordes redondeados */
-}
 
-/* Estilos para texto en negrita centrado */
-.negrita_centrado {
-  font-weight: bold; /* Texto en negrita */
-  width: 150px; /* Ancho */
-  margin: 0 auto; /* Centra horizontalmente */
-  color: black;
-}
-
-/* Estilos para el contenedor centrado */
-.contenedor-centro {
-  display: flex; /* Flexbox para el layout */
-  flex-direction: column; /* Dirección de los elementos en columna */
-  align-items: center; /* Centra horizontalmente */
-  text-align: center; /* Centra el texto */
-}
-
-/* Estilos para el texto de dos líneas */
-.texto-dos-lineas {
-  width: 300px; /* Ancho */
-  text-align: center; /* Centra el texto */
-  color: black;
-  margin: 0 auto; /* Centra horizontalmente */
-  font-size: 16px;
-}
