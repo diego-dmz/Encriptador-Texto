@@ -1,3 +1,4 @@
+
 function cifrarTexto() {
     let texto_original = document.getElementById("texto").value;
     let resultadodiv = document.getElementById("resultadotexto");
@@ -13,19 +14,13 @@ function cifrarTexto() {
     resultadodiv.innerText = texto_cifrado;
     resultadodiv.style.display = "block";
     botonCopiar.style.display = "inline-block";
-
-    let subcadenas = ["ai", "enter", "imes", "ober", "ufat"];
-    let contieneSubcadena = subcadenas.some(subcadena => texto_original.includes(subcadena));
-
-    let validarTexto = document.getElementById("resultadotexto");
-    if (contieneSubcadena) {
-        validarTexto.innerHTML = "Texto Encriptado!";
-    } 
+    actualizarEstadoBotones();
 }
 
 function descifrarTexto() {
     let texto_cifrado = document.getElementById("texto").value;
     let resultadodiv = document.getElementById("resultadotexto");
+    let botonCopiar = document.querySelector(".boton_copiar");
 
     let texto_descifrado = texto_cifrado
         .replace(/enter/g, "e")
@@ -35,7 +30,9 @@ function descifrarTexto() {
         .replace(/ufat/g, "u");
 
     resultadodiv.innerText = texto_descifrado;
+    botonCopiar.style.display = "inline-block";
     resultadodiv.style.display = "block";
+    actualizarEstadoBotones();
 }
 
 function filtrarTexto() {
@@ -45,11 +42,10 @@ function filtrarTexto() {
 
     let resultadodiv = document.getElementById("resultadotexto");
     let botonCopiar = document.querySelector(".boton_copiar");
-
+    let imagen = resultadodiv.querySelector("img");
     resultadodiv.innerHTML = "";
 
     if (texto_original.trim() === "") {
-        let imagen = resultadodiv.querySelector("img");
         if (!imagen) {
             imagen = document.createElement("img");
             imagen.src = "imagenes/Muñeco.png";
@@ -62,14 +58,18 @@ function filtrarTexto() {
 
         let mensaje2 = document.createElement("p");
         mensaje2.textContent = "Ingresa el texto que desees encriptar o desencriptar.";
-
+        
+        resultadodiv.appendChild(imagen);
         resultadodiv.appendChild(mensaje1);
         resultadodiv.appendChild(mensaje2);
-
+        
+        
         botonCopiar.style.display = "none";
     } else {
+        resultadodiv.appendChild(imagen);
         resultadodiv.style.display = "block";
     }
+    actualizarEstadoBotones();
 }
 function mostrarMensajeTemporal(mensaje) {
     let mensajeElemento = document.createElement("p");
@@ -92,4 +92,21 @@ function copiarTexto() {
         console.error("No se pudo copiar el texto: ", err);
         mostrarMensajeTemporal("No se pudo copiar el texto.");
     });
+}
+function verificarTextoEncriptado(texto) {
+    let subllaves = ["ai", "enter", "imes", "ober", "ufat"];
+    return subllaves.some(subllaves => texto.includes(subllaves));
+}
+
+document.getElementById("texto").addEventListener("input", actualizarEstadoBotones);
+
+function actualizarEstadoBotones() {
+    let texto = document.getElementById("texto").value;
+    let botonEncriptar = document.getElementById("boton_encriptar");
+
+    if (verificarTextoEncriptado(texto)) {
+        botonEncriptar.disabled = true;
+    } else {
+        botonEncriptar.disabled = false;
+    }
 }
