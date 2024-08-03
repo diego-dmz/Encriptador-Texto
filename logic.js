@@ -42,6 +42,8 @@ function filtrarTexto() {
 
     let resultadodiv = document.getElementById("resultadotexto");
     let botonCopiar = document.querySelector(".boton_copiar");
+    let botonlimpiar = document.querySelector(".boton_limpiar");
+    
     let imagen = resultadodiv.querySelector("img");
     resultadodiv.innerHTML = "";
 
@@ -50,8 +52,10 @@ function filtrarTexto() {
             imagen = document.createElement("img");
             imagen.src = "imagenes/Muñeco.png";
             imagen.alt = "muñeco salida";
-            resultadodiv.appendChild(imagen);
+            imagen.classList.add("imgn");  
         }
+
+        resultadodiv.appendChild(imagen);
 
         let mensaje1 = document.createElement("p");
         mensaje1.innerHTML = "<strong>Ningún mensaje fue encontrado</strong>";
@@ -65,11 +69,13 @@ function filtrarTexto() {
         
         
         botonCopiar.style.display = "none";
+        botonlimpiar.style.display = "none";
     } else {
         resultadodiv.appendChild(imagen);
         resultadodiv.style.display = "block";
+        botonlimpiar.style.display = "block";
     }
-    actualizarEstadoBotones();
+    
 }
 function mostrarMensajeTemporal(mensaje) {
     let mensajeElemento = document.createElement("p");
@@ -106,7 +112,27 @@ function actualizarEstadoBotones() {
 
     if (verificarTextoEncriptado(texto)) {
         botonEncriptar.disabled = true;
+        botonEncriptar.classList.add("boton-transparente");
     } else {
         botonEncriptar.disabled = false;
+        botonEncriptar.classList.remove("boton-transparente");
     }
 }
+
+    function limpiarTexto() {
+    document.getElementById("texto").value = "";
+
+    
+    let resultadodiv = document.getElementById("resultadotexto");
+    resultadodiv.innerHTML = "";
+
+  
+    let botonCopiar = document.querySelector(".boton_copiar");
+    botonCopiar.style.display = "none";
+
+    filtrarTexto()
+    
+    actualizarEstadoBotones();
+    }
+
+    

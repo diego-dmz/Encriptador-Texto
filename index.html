@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head> 
 <body>
-    <header >
-        <img class="Logo__Encabezado" src="imagenes/Logo.png" alt="logo Alura">
-    </header>
-    
+        
     <main>
+        <img class="Logo__Encabezado" src="imagenes/Logo.png" alt="logo Alura">
         <div class="Presentacion">
                 <textarea class="Imput__Texto" id="texto" placeholder="Ingrese el texto aquí" oninput="filtrarTexto()"></textarea>
+    
             <div class="Resultado__Texto"  id="resultadotexto" >
-                <img class="img__resultado" src="imagenes/Muñeco.png" alt="muñeco salida">
+                <img src="imagenes/Muñeco.png" alt="muñeco salida">
                 <p style="font-weight: bold;">Ningún mensaje fue encontrado</p>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </div>
-
+            <div><button class="boton_limpiar" id="boton_limpiar" onclick="limpiarTexto()"><img class="limpiar" src="./imagenes/eliminar.png" alt="eliminar"></button></div>
         <div class="cont__botones">
-            <div class="Botones__desencriptacion">
-            <button class="boton_encriptar" id="boton_encriptar"bobertobernenterncrimesptair onclick="cifrarTexto()">Encriptar</button>
-            <button class="boton_Desencriptar" onclick="descifrarTexto()">Desencriptar</button></div>
+            
+            <div class="Botones">
+            <button class="boton_encriptar" id="boton_encriptar" onclick="cifrarTexto()">  <img class="iconocandado" src="./imagenes/candado cerrado.png" alt="Icono candado1">Encriptar</button>
+            <button class="boton_Desencriptar" onclick="descifrarTexto()"><img class="iconocandado" src="./imagenes/candado abierto.png" alt="Icono candado2">Desencriptar</button></div>
             <button class="boton_copiar" onclick="copiarTexto()">Copiar</button>
+            
+
         </div>
     </main>
     <script src="logic.js"></script>
