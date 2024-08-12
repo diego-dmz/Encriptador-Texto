@@ -62,7 +62,7 @@ body{
    flex-direction: column;
    align-items: center; /* Centra horizontalmente dentro de la columna */
    justify-content: center;
-   width: 30%;
+   width: 25%;
    height: 400px;
    color: var(--color-2);
    font-family: var(--fuente-Inter);
