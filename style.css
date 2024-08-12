@@ -64,11 +64,15 @@ body{
 
 
 .Resultado__Texto {
-   width: 42%;
-   height: 60vh;
-   color: var(--color-1);
-   font-family: var(--fuente-nunito);
-   font-size: 1.2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* Centra horizontalmente dentro de la columna */
+   justify-content: center;
+   width: 30%;
+   height: 400px;
+   color: var(--color-2);
+   font-family: var(--fuente-Inter);
+   font-size: 18px;
    font-weight: 400;
    overflow: hidden; /* Oculta el contenido desbordado */
    overflow: auto;
