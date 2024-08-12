@@ -11,26 +11,37 @@
     <main>
         <img class="Logo__Encabezado" src="imagenes/Logo.png" alt="logo Alura">
         <div class="Presentacion">
-                <textarea class="Imput__Texto" id="texto" placeholder="Ingrese el texto aquí" oninput="filtrarTexto()"></textarea>
-    
-            <div class="Resultado__Texto"  id="resultadotexto" >
-                <img src="imagenes/Muñeco.png" alt="muñeco salida">
-                <p style="font-weight: bold;">Ningún mensaje fue encontrado</p>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
-        </div>
-            <div><button class="boton_limpiar" id="boton_limpiar" onclick="limpiarTexto()"><img class="limpiar" src="./imagenes/eliminar.png" alt="eliminar"></button></div>
-        <div class="cont__botones">
-            
-            <div class="Botones">
-            <button class="boton_encriptar" id="boton_encriptar" onclick="cifrarTexto()">  <img class="iconocandado" src="./imagenes/candado cerrado.png" alt="Icono candado1">Encriptar</button>
-            <button class="boton_Desencriptar" onclick="descifrarTexto()"><img class="iconocandado" src="./imagenes/candado abierto.png" alt="Icono candado2">Desencriptar</button></div>
-            <button class="boton_copiar" onclick="copiarTexto()">Copiar</button>
-            
+                <textarea class="Imput__Texto" id="texto" placeholder="Ingrese el texto aquí..." oninput="filtrarTexto()"></textarea>
+                <button class="boton_reset" id= "reset" onclick="limpiarTexto()"><img class="reset_img" src="./imagenes/reset.png" alt="eliminar"></button>
 
+            <div class="Resultado__Texto"  id="resultadotexto" >
+                <img id = "imagen_buscar" src="imagenes/Muñeco.png" alt="muñeco salida">
+                <p class="p_1">Ningún mensaje fue encontrado</p>
+                <p class="p_2">Ingresa el texto que desees encriptar o desencriptar.</p></div>
+            </div>
+            <p class="p_3">Solo letras minúsculas, sin acentos ni caracteres especiales.</p>
+            <img class="info_img" src="imagenes/info2.png" alt="informacion2">
+
+            
         </div>
-    </main>
+            
+            <div class="cont__botones">
+            <button class="Botones__encriptar" id="boton_encriptar" onclick="cifrarTexto()">  <img class="icono_boton" src="./imagenes/editar.png" alt="encriptar">Encriptar</button>
+            <button class="Botones__desencriptar" onclick="descifrarTexto()"><img class="icono_boton" src="./imagenes/documento.png" alt="descifrarTexto">Desencriptar</button>
+            <div class="copiar"><button class="boton_copiar" onclick="copiarTexto()"><img class="copiar_img" src="./imagenes/copiar.png" alt="copiar"></button></div>
+        </div> 
     <script src="logic.js"></script>
+    <footer>
+        <div class="footer_cont">
+            <p>© 2024</p> 
+            <p>Diego Armando Dominguez P.</p>
+            <p>Contactame: <a href="mailto:godiepxndozo@gmail.com"><img class="redes" src="./imagenes/gmail.png"></a></p>
+            <p>Sígueme en: 
+                <a href="https://github.com/diego-dmz" target="_blank"><img class="redes" src="./imagenes/git.png"></a> | 
+                <a href="https://www.linkedin.com/in/d-dmz/" target="_blank"><img class="redes" src="./imagenes/linkedin.png"></a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
