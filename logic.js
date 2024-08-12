@@ -95,7 +95,6 @@ function filtrarTexto() {
             imagen = document.createElement("img");
             imagen.src = "imagenes/Muñeco.png";
             imagen.alt = "muñeco salida";
-            imagen.classList.add("Resultado__Texto img");
         }
 
         let mensaje1 = document.createElement("p");
