@@ -95,6 +95,7 @@ function filtrarTexto() {
             imagen = document.createElement("img");
             imagen.src = "imagenes/Muñeco.png";
             imagen.alt = "muñeco salida";
+            imagen.classList.add("Resultado__Texto img");
         }
 
         let mensaje1 = document.createElement("p");
@@ -117,9 +118,12 @@ function filtrarTexto() {
             imagen.src = "imagenes/Muñeco.png";
             imagen.alt = "muñeco salida";
             imagen.id = "imagen_buscar";
+            
         }
+        
         resultadodiv.appendChild(imagen);
         botonlimpiar.style.display = "inline-block";
+        
     }
 }
 
