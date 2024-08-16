@@ -416,6 +416,8 @@ text-align: center;
    .Presentacion {
       flex-direction: column;
       padding: 0% 5%;
+      padding-left: 9%;
+
       position: relative;
       height: 130vh;
     
