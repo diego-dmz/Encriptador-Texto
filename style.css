@@ -21,6 +21,7 @@ body{
    box-sizing: border-box;
    background-color: var(--color-4);
    overflow-x: hidden;
+
    
 }
 .Presentacion{
@@ -28,7 +29,7 @@ body{
    display: flex;
    justify-content:space-between;
    position: relative;
-
+  
 }
 
 .Logo__Encabezado {
@@ -106,8 +107,9 @@ body{
 }
 .p_3 {
    position: absolute;
+   width: 30%;
    left:10%;
-   top: 81%;
+   top: 105%;
    font-size: 0.8rem;
    color: var(--color-1);
    font-family: var(--fuente-rocknroll);
@@ -116,7 +118,7 @@ body{
    .info_img{
       position: absolute;
       left:7.5%;
-      top: 80.5%;
+      top: 104%;
       width: 2%;
       
    }
@@ -277,7 +279,7 @@ text-align: center;
 }
 
 /*tablet*/
-@media only screen and (min-width: 480px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
    .Presentacion {
       flex-direction: column;
       padding: 0% 5%;
@@ -364,26 +366,27 @@ text-align: center;
    .p_1{
       position: absolute;
       width: 40%;
-      top: 10%;
-      left: 42%;
-      font-size: 0.7rem;
+      top: 15%;
+      left: 40%;
+      font-size: 1.7rem;
    }
    .p_2{
       position: absolute;
-      width: 50%;
-      top: 18%;
-      left: 37%;
-      font-size: 0.62rem;
+      width: 45%;
+      top: 34%;
+      left: 39%;
+      font-size: 1.62rem;
    }
-  .p_3{
+   .p_3{
       position: absolute;
-      top: 57%;
+      top: 30%;
       left: 13%;
+      width: 80%;
       font-size: 0.6rem;
    }
   .alerta{
       position: absolute;
-      top: 55%;
+      top: 54%;
       left: 4%;
    }
    .mensaje-temporal{
@@ -394,10 +397,10 @@ text-align: center;
       font-size: 0.8rem;
    }
   .info_img{
-      width: 3%;
+      width: 2.5%;
       position: absolute;
-      top: 57.2%;
-      left: 9%;
+      top: 29.5%;
+      left: 10%;
    
    }
    .cont_limpiar {
@@ -410,7 +413,7 @@ text-align: center;
 
 
 /*telefono*/
-@media only screen and (max-width: 486px) {
+@media only screen and (max-width: 480px) {
 
 
    .Presentacion {
@@ -514,13 +517,14 @@ text-align: center;
    }
   .p_3{
       position: absolute;
-      top: 57%;
+      top: 35%;
       left: 13%;
+      width: 80%;
       font-size: 0.6rem;
    }
   .alerta{
       position: absolute;
-      top: 55%;
+      top: 57%;
       left: 4%;
    }
    .mensaje-temporal{
@@ -533,7 +537,7 @@ text-align: center;
   .info_img{
       width: 3%;
       position: absolute;
-      top: 57.2%;
+      top: 35%;
       left: 9%;
    
    }
