@@ -369,22 +369,22 @@ box-sizing: border-box;
       position: absolute;
       width: 40%;
       top: 15%;
-      left: 40%;
-      font-size: 1.7rem;
+      left: 45%;
+      
    }
    .p_2{
       position: absolute;
       width: 45%;
-      top: 34%;
-      left: 39%;
-      font-size: 1.62rem;
+      top: 23%;
+      left: 42.5%;
+      
    }
    .p_3{
       position: absolute;
       top: 30%;
       left: 13%;
       width: 80%;
-      font-size: 0.6rem;
+      
    }
   .alerta{
       position: absolute;
@@ -433,7 +433,7 @@ box-sizing: border-box;
       margin-bottom: 5%; 
       margin-top: 5%;
    }
-   
+
    .boton_reset {
       width: 10%;
       height: 5vh;
