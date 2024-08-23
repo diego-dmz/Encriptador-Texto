@@ -281,7 +281,7 @@ box-sizing: border-box;
 }
 
 /*tablet*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1020px) {
    .Presentacion {
       flex-direction: column;
       padding: 0% 5%;
@@ -368,7 +368,7 @@ box-sizing: border-box;
    .p_1{
       position: absolute;
       width: 40%;
-      top: 15%;
+      top: 12%;
       left: 45%;
       
    }
@@ -506,15 +506,15 @@ box-sizing: border-box;
    .p_1{
       position: absolute;
       width: 40%;
-      top: 10%;
+      top: 9%;
       left: 42%;
       font-size: 0.7rem;
    }
    .p_2{
       position: absolute;
-      width: 50%;
-      top: 18%;
-      left: 37%;
+      width: 40%;
+      top: 17%;
+      left: 42%;
       font-size: 0.62rem;
    }
   .p_3{
@@ -534,7 +534,7 @@ box-sizing: border-box;
       top: 143%;
       height: auto;
       left: 15%;
-      font-size: 0.8rem;
+      
    }
   .info_img{
       width: 3%;
